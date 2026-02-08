@@ -1,40 +1,82 @@
-Wine Quality Prediction Analysis - Classification
-Dataset Information
-The two datasets are related to red and white variants of the Portuguese "Vinho Verde" wine. These datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced (e.g. there are munch more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods. Two datasets were combined and few values were randomly removed.
+To make your README professional and clear, you should use structured Markdown elements like headers, bullet points, and code blocks. This makes it easier for recruiters or other developers to understand your work quickly.
 
-Attribute Information:
-Input variables (based on physicochemical tests):
-1 - fixed acidity
-2 - volatile acidity
-3 - citric acid
-4 - residual sugar
-5 - chlorides
-6 - free sulfur dioxide
-7 - total sulfur dioxide
-8 - density
-9 - pH
-10 - sulphates
-11 - alcohol
-Output variable (based on sensory data):
-12 - quality (score between 0 and 10)
+Here is a refined version of your README:
 
+---
 
-Libraries
-pandas
-matplotlib
-seaborn
-scikit-learn
-Algorithms
-Logistic Regression
-Decision Tree
-Random Forest
-Extra Tress
-XGBoost
-LightGBM
-Best Model Accuracy: 69.00
+# 🍷 Wine Quality Prediction Analysis
 
-Future Work
-Removing Outliers
-Removing Attributes
-Hyperparameter Tuning
-Random UnderSampling
+This project performs a classification analysis on the Portuguese "Vinho Verde" wine dataset. The goal is to predict the quality of wine based on physicochemical tests using various machine learning algorithms.
+
+## 📋 Project Overview
+
+The dataset includes red and white wine variants. The task is treated as a **classification** problem where the wine quality (score 0–10) is the target variable.
+
+**Key Challenges:**
+
+* **Imbalanced Classes:** There are significantly more "normal" wines than excellent or poor ones.
+* **Feature Relevance:** Not all physicochemical attributes may contribute equally to the quality score.
+* **Data Integrity:** The red and white datasets were merged, and some values were randomly removed to simulate real-world data cleaning scenarios.
+
+## 📊 Dataset Attributes
+
+### Input Variables (Physicochemical Tests):
+
+1. **Fixed acidity**
+2. **Volatile acidity**
+3. **Citric acid**
+4. **Residual sugar**
+5. **Chlorides**
+6. **Free sulfur dioxide**
+7. **Total sulfur dioxide**
+8. **Density**
+9. **pH**
+10. **Sulphates**
+11. **Alcohol**
+
+### Output Variable (Sensory Data):
+
+12. **Quality** (Score between 0 and 10)
+
+## 🛠️ Tech Stack
+
+* **Language:** Python
+* **Libraries:** `Pandas`, `Matplotlib`, `Seaborn`, `Scikit-learn`
+* **Frameworks:** `XGBoost`, `LightGBM`
+
+## 🤖 Models Evaluated
+
+We implemented and compared several machine learning models:
+
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* Extra Trees
+* XGBoost
+* LightGBM
+
+### 🏆 Results
+
+The best-performing model achieved an accuracy of **69.00%**.
+
+## 🚀 Future Enhancements
+
+To improve the model performance and handle the class imbalance, the following steps are planned:
+
+* [ ] **Outlier Detection:** Use specialized algorithms to identify and handle rare "excellent" or "poor" wines.
+* [ ] **Feature Selection:** Remove low-relevance attributes to reduce noise and overfitting.
+* [ ] **Hyperparameter Tuning:** Use GridSearch or RandomSearch to optimize model parameters.
+* [ ] **Data Resampling:** Implement **Random UnderSampling** or SMOTE to balance the target classes.
+
+## 📁 Repository Structure
+
+* `WineQualityAnalysis.ipynb`: Main Jupyter notebook containing data cleaning, EDA, and modeling.
+* `README.md`: Project documentation.
+
+---
+
+### How to improve this even further:
+
+1. **Add a "How to Run" section:** Tell users how to install dependencies (`pip install -r requirements.txt`).
+2. **Visuals:** Add a screenshot of a correlation heatmap or a bar chart showing the distribution of wine quality.
+3. **Key Insight:** Mention which feature was most important (e.g., "Alcohol content was found to be the strongest predictor of quality").
